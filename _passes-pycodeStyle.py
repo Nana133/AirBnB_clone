@@ -1,6 +1,7 @@
 #!/usr/bin/python
 "" This code passes the pycodestyle checks ""
 
+
 def calc_sum(a, b):
     """Returns the sum of two numbers."""
     result = a + b
@@ -17,4 +18,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
