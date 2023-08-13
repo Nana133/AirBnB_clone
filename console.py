@@ -13,6 +13,12 @@ class HBNBCommand(cmd.Cmd):
     """This is the Class for the command interpreter."""
 
     prompt = "(hbnb) "
+    classes = {'BaseModel': BaseModel, 'User': User, 'City': City,
+               'Place': Place, 'Amenity': Amenity, 'Review': Review,
+               'State': State}
+    
+    def default(self, line):
+        """Catch commands if nothing """
 
     def default(self, line):
         """Catch commands if nothing else matches then."""
