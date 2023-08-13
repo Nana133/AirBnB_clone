@@ -13,6 +13,7 @@ from models.city import City
 from models.amenity import Amenity
 from models.review import Review
 
+
 class HBNBCommand(cmd.Cmd):
 
     """This is the Class for the command interpreter."""
@@ -21,7 +22,7 @@ class HBNBCommand(cmd.Cmd):
     classes = {'BaseModel': BaseModel, 'User': User, 'City': City,
                'Place': Place, 'Amenity': Amenity, 'Review': Review,
                'State': State}
-    
+
     def default(self, line):
         """Catch commands if nothing """
 
@@ -172,7 +173,7 @@ class HBNBCommand(cmd.Cmd):
                     print('** attribute name missing **')
             else:
                 print('** no instance found **')
-          
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
