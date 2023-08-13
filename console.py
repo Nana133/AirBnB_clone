@@ -145,6 +145,19 @@ class HBNBCommand(cmd.Cmd):
         else:
             print([str(a) for b, a in storage.all().items() if arg in b])
 
+    def do_count(self, line):
+        """This counts the instances of a class."""
+        words = line.split(' ')
+        if not words[0]:
+            print("** class name missing **")
+        elif words[0] not in self.classes:
+            print("** class doesn't exist **")
+        else:
+            matches = [
+                k for k in storage.all() if k.startswith(
+                    words[0] + '.')]
+            print(len(matches))
+
     def do_update(self, arg):
         """ Method that updates JSON file"""
         arg = arg.split()
